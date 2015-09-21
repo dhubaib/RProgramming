@@ -20,11 +20,7 @@ corr <- function(directory, threshold = 0) {
   cvector = vector("numeric",sum(aboveThreshold));  
   id = observationCount[aboveThreshold,"id"]; # Grab corresponding ids
   
-  if(length(id) == 0) # If no matches to criteria return 0
-  {
-    cvector <- 0
-  }
-  else
+  if(length(id) > 0) # Only if matches to criteria return 0
   {
     ## Read in data from relevant files
     filenames = sprintf("%s/%03d.csv",directory,id)
@@ -38,5 +34,6 @@ corr <- function(directory, threshold = 0) {
       cvector[i] = cor(subs[,"nitrate"],subs[,"sulfate"])
     }
   }
+  
   cvector
 }
