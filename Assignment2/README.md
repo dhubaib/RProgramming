@@ -1,3 +1,5 @@
+### Originally forked from https://github.com/rdpeng/ProgrammingAssignment2 - manually moved to repo dedicated to the R Programming Coursera course.
+
 ### Introduction
 
 This second programming assignment will require you to write an R
